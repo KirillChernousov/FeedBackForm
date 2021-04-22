@@ -1,0 +1,64 @@
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+<div class="contact-form">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <br>
+        <div class="module-title">
+            <h3><span>Напишите нам</span></h3> 
+        </div>
+    
+        <br>
+        <div class="container">
+            <div class="left_container">
+
+                <label class="input_name">Ваше имя:</label><br>
+                <label class="input_email">Ваш email:</label><br>
+                <label class="input_phone">Ваш телефон:</label><br>
+                <label class="input_topic">Тема:</label><br>
+                <label class="input_message">Ваше сообщение:</label>
+            </div>
+            <div class="right_container">
+
+                <input class="input_name icon_name" type="text" formControlName="name" [(ngModel)]="name1" required>
+                <div class="alert alert-danger"
+                            *ngIf="form.controls['name'].invalid && form.controls['name'].touched">
+                            Введите имя
+                        </div>
+
+                <input class="input_email icon_email" type="email" formControlName="email" [(ngModel)]="email1" required>
+                <div class="alert alert-danger"
+                            *ngIf="form.controls['email'].invalid && form.controls['email'].touched">
+                            Некорректный email
+                        </div>
+
+                <input class="input_phone icon_phone" type="tel" formControlName="phone" [(ngModel)]="phone1"
+                    pattern="[0-9]{11}" required>
+                    <!-- pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" required -->
+                    <div class="alert alert-danger"
+                    *ngIf="form.controls['phone'].invalid && form.controls['phone'].touched">
+                    Введите номер телефона (шаблон: 88001232020)
+                </div>
+
+                <select class="input_topic" size="1" formControlName="topic" [(ngModel)]="topic1" required>
+                    <option value="1">техподдержка</option>
+                    <option value="2">продажи</option>
+                    <option selected value="3">другое</option>
+                </select>
+
+                <textarea class="input_message" formControlName="message" [(ngModel)]="message1" required></textarea>
+                <div class="alert alert-danger"
+                            *ngIf="form.controls['message'].invalid && form.controls['message'].touched">
+                            Запишите ваше сообщение
+                        </div>
+                <div class="captcha">
+                    <input type="text" id="captcha">
+                    <img id="captcha_img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrBwCJZnsgsZIj9s2D6sdRBbRMzEeZfwYwzQ&usqp=CAU">
+                </div>
+                
+                <div class="g-recaptcha" data-sitekey="6LexuLEaAAAAADPF59Z25pGSvVJcoGMwJHxxXTUF"></div>
+
+                <input type="submit" name="submit" value="Отправить" class="submit-btn">
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,167 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.contact-form
+{
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5);
+    margin: 50px auto;
+    width: 50%;
+    text-align: center;
+    font-weight: bold;
+    background-color: rgb(243, 243, 242);
+    border-radius: 10px;
+}
+
+.contact-form label 
+{
+    display: block;
+    text-align: left;
+    margin: 5px;
+}
+.contact-form input
+{    
+    display: block;
+    width: 90%;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    border-color: white;
+}
+.contact-form select
+{
+    display: block;
+    width: 90%;
+    margin: 10px auto;
+    padding: 10px;
+    color: grey;
+    border-radius: 10px;
+    background-color: #ffffff;
+    border-color: grey;
+}
+.contact-form textarea
+{
+    display: block;
+    width: 90%;
+    margin: 5px auto;
+    padding: 10px;
+    height: 80px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    border-color: grey;
+}
+.captcha
+{
+    width: 90%;
+}
+.captcha input
+{
+    margin: 5px 5%;
+    width: 40%;
+    float: left;
+}
+#captcha_img
+{
+    width: 20%;
+}
+.submit-btn
+{
+    cursor: pointer;
+    width: 150px !important;
+    margin-left: 5% !important;
+}
+.container 
+{
+    display: table;
+    width: 100%;
+    box-sizing: border-box; 
+    margin-left: 0;
+    margin-right: 0;
+}
+.container > div,
+.container > noindex > div 
+{
+    display: table-cell;
+    vertical-align: top;
+    width: auto;
+    box-sizing: border-box;
+}
+.container > .left_container,
+.container > noindex > .left_container
+{
+    width: 20%;
+}
+.container > .right_container,
+.container > noindex > .right_container
+{
+    width: 80%;
+    overflow: hidden;
+}
+.g-recaptcha
+{
+    margin: 10px 20px;
+}
+.status
+{
+    font-size: 15px;
+    color: green;
+    padding: 15px;
+}
+input.icon_name{
+    background: url(http://s1.iconbird.com/ico/0612/customicondesignoffice2/w256h2561339870331Man256.png) no-repeat center left;
+    background-size: auto 90%;
+    padding-left:30px;       
+    text-indent: 1.5rem; 
+}
+input.icon_email{
+    background: url(http://s1.iconbird.com/ico/2013/6/289/w512h5121371656092emailblue.png) no-repeat center left;
+    background-size: auto 90%;
+    padding-left:30px;  
+    text-indent: 1.5rem;  
+}
+input.icon_phone{
+    background: url(https://img.icons8.com/plasticine/2x/cell-phone.png) no-repeat center left;
+    background-size: auto 90%;
+    padding-left:30px;    
+    text-indent: 1.5rem;
+}
+
+.module-title h3{
+    text-align: center;
+    margin: 0;
+    color: #fff;
+    /*shadow*/    
+    text-shadow: 0px 1px 0px #000; 
+}
+.module-title::after, .module-title::before {
+    content: '';
+    position: absolute;
+    bottom: -15px; right: -15px;
+    z-index: -1;
+
+    border-color: transparent transparent transparent #036;
+    border-style: solid;
+    border-width: 15px;
+    width: 0; height: 0;
+    line-height: 0;
+}
+.module-title::before {
+    bottom: -15px; left: -15px;
+    border-color: transparent #036 transparent transparent;
+}
+.module-title {
+    position: relative;
+    width: 80%;
+    padding: 10px 15px;
+    margin: 0 0 0 -15px;
+    background: #c22e2e;
+    border-bottom-right-radius: 100px;
+
+    /*shadow*/
+    -moz-box-shadow: 0px 1px 3px #000000;
+    -webkit-box-shadow: 0px 1px 3px #000000;
+    box-shadow: 0px 1px 3px #000000;  
+}
